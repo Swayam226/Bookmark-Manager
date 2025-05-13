@@ -33,14 +33,14 @@
     align-items: center;
     justify-content: center;
     /* width: 50%; */
-    gap: 15px;
+    gap: 40px;
     padding: 20px;
     /* background-color: beige; */
     /* border-radius: 10px; */
 }
 
 input{
-    width: 100%;
+    /* width: 100%; */
     padding: 8px;
     border: 1px solid black;
     border-radius: 8px;
@@ -55,13 +55,13 @@ input{
 }
 
 button {
-    width: 100%;
+    width: 100px;
     background-color: #4CAF50;
     color: white;
     border: none;
     padding: 8px;
     font-size: 16px;
-    border-radius: 18px;
+    border-radius: 48px;
     cursor: pointer;
     background: linear-gradient(20deg, #ff0606, #017cff);
 }
