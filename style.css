@@ -33,6 +33,7 @@
 #myform{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     /* width: 50%; */
     gap: 40px;
     padding: 20px;
