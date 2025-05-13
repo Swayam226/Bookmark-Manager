@@ -2,7 +2,7 @@ const form = document.getElementById("myform")
 const bkname = document.getElementById("bkname")
 const bkurl = document.getElementById("bkurl")
 const btn = document.getElementById("btn")
-const saved = document.getElementById("savedbm")
+const savedbookmark = document.getElementById("savedbmpara")
 
 
 
@@ -13,21 +13,22 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (storedbk) {
         const bookmark = JSON.parse(storedbk);
-        saved.textContent = `${bookmark.bname} - ${bookmark.burl}`;
+        savedbookmark.innerHTML = `${bookmark.bname} - <a href="${bookmark.burl}" target="_blank">${bookmark.burl}</a>`;
     }
     else {
-        saved.textContent = "no bookmark found";
+        savedbookmark.textContent = "Sorry, no bookmark found :(";
     }
 })
 
 // save bookmarks
 btn.addEventListener("click", () => {
     const bookmark = {
+        // used object to store multiple values
         bname: bkname.value.trim(),
         burl: bkurl.value.trim()
     }
     localStorage.setItem("bookmark", JSON.stringify(bookmark));
-    saved.innerHTML = `${bookmark.bname} - <a href="${bookmark.burl}" target="_blank">${bookmark.burl}</a>`;
+    savedbookmark.innerHTML = `${bookmark.bname} - <a href="${bookmark.burl}" target="_blank">${bookmark.burl}</a>`;
 
 })
 
